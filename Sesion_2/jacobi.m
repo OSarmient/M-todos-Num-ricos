@@ -5,7 +5,7 @@ function jacobi(A, b, x, t, n)
     %           x -- Aproximación Inicial
     %           t -- Tolerancia
     %           n -- Número de iteraciones
-    % Output:
+    % Output:   Impresión de todas las iteraciones sobre la matriz que se está evaluando
 
     m = length(x);          % la longitud del vector (array) que estamos ingresando
 
