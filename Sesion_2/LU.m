@@ -22,9 +22,9 @@ C=[L B];     %Se le asigna a C el ensamble de la Matriz L con la matriz B
     s=0;
     for j=1:n-1             %Se comienzan a correr los valores de j
       s=s+C(i,j)*y(j);       %Acumulacion de s a medida que incrementa j
-      endfor
+    end
     y(i)=(C(i,n+1)-s)/C(i,i);
-    endfor
+  end
   y;
 
   D = [U y];        %Se le asigna a D el ensamble de la Matriz U con la matriz y
@@ -39,10 +39,8 @@ C=[L B];     %Se le asigna a C el ensamble de la Matriz L con la matriz B
     for j=n:-1:i+1
       S=S+D(i,j)*x(j);
 
-    endfor
+    end
     x(i)=(D(i,n+1)-S)/D(i,i);
-  endfor
+  end
 x;
- endfunction
-
-
+end
