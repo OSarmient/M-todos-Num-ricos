@@ -30,9 +30,9 @@ function [D, v] = newtonInterpolation(x, y, p, g, p0)
     v = v + (D(k,k-p0+1)*s0)/factorial(k-p0);
   end
 
-  A = linspace(x(1), x(n), 100);
+  %A = linspace(x(1), x(n), 100);
   %B = polyval(x, D);
-  plot(A, D, 'r')
+  %plot(A, D, 'r')
   hold on;
   plot(x, y, '*')
 end
