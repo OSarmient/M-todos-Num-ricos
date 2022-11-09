@@ -10,8 +10,10 @@ syms t
 for k = 1:M+1
   F(:,k)=(x').^(k-1);  % Se reemplaza la matriz de 0s con columnas con las potencias de x
 end
+F
+F'
 A = (F')*F;
-B = (F')*(y');
+B = (F')*(y')
 scatter(x,y)
 hold on
 grid on
@@ -58,16 +60,12 @@ Z=[L B];     %Se le asigna a Z el ensamble de la Matriz L con la matriz B
     end
     C(i)=(D(i,n+1)-S)/D(i,i);
   end
-C
+C         %Muestra el exponente en orden creciente en relación al exponente x
 P=0;
-for i=2:n
+  for i=2:n
     P=P+ (t^(i-1))*C(i);     %Ecuacion final polinomio
   end
   P=P + C(1)
 ezplot(P,[-3,4])
-legend({'Datos','Polinomio de ajuste'},'Location','best');
+legend({'Datos','Polinomio de ajuste'},'Location','southeast');
 end
-
-
-
-
